@@ -1,4 +1,6 @@
 This script starts up Your minecraft instances and several third party programs such as OBS, Ninjabrain-bot etc
+after each session it can also kill your instances and third party programs, exept OBS and the reset tracker of course
+can delete your old worlds
 
 requirements: Python 3.7 or higher, windows, MultiMc
 
