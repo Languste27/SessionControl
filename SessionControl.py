@@ -85,4 +85,4 @@ start()
 # Make sure to have backslashes and type everything correctly
 # Also don't paste the paths to the actual files, just the folder they are located in
 
-# For other issues just dm me, RadioaktiveLanguste#0672
+# For other issues or questions just dm me, RadioaktiveLanguste#0672
