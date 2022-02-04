@@ -1,2 +1,5 @@
 This script starts up Your minecraft instances and several third party programs such as OBS, Ninjabrain-bot etc
-feel free to use
+
+requirements: Python 3.7 or higher, windows, MultiMc
+
+feel free to use and modify
