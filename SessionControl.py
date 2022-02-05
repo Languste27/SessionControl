@@ -19,13 +19,13 @@ reset_tracker = "C:\\Users\\Max Afemann\\Desktop\\Speedrun stuff\\Reset tracker"
 wall_script = "C:\\Users\\Max Afemann\\Desktop\\Speedrun stuff\\TheWall"  # location of your wall script, has to be named TheWall.ahk
 obs_exe = "C:\\Program Files\\obs-studio\\bin\\64bit"  # location of your obs.exe, probably same as mine
 
-# Set to True if you are want these things
-start_ninjabrain = False  # Set to true if using Ninjabrain
-start_Tracker = False  # Set to true if using TalkingMimes reset-tracker
-start_obs = False  # Set to true if using obs
-start_instances = False  # Set to true to make it start up your instances
-delete_old_worlds = False  # Set to true to make it delete your worlds
-kill_session = False  # Set to true to make it kill all ur shit (except obs and reset-tracker ofc)
+# Set to 1 if you want these things
+start_ninjabrain = 0  # Set to true if using Ninjabrain
+start_Tracker = 0  # Set to true if using TalkingMimes reset-tracker
+start_obs = 0  # Set to true if using obs
+start_instances = 0  # Set to true to make it start up your instances
+delete_old_worlds = 0  # Set to true to make it delete your worlds
+kill_session = 0  # Set to true to make it kill all ur shit (except obs and reset-tracker ofc)
 
 
 # Don't configure these
@@ -62,22 +62,22 @@ def instance_startup():  # stole even more of his code lmao
 def start():
     os.system(f'start {mmc}\\MultiMC.exe')
 
-    if start_ninjabrain:
+    if start_ninjabrain == 1:
         os.system(f'start /d "{ninja_bot}" "" calc.jar')
 
-    if start_Tracker:
+    if start_Tracker == 1:
         os.system(f'start /d "{reset_tracker}" "" resetTracker.exe')
 
     time.sleep(3)
 
-    if start_instances:
+    if start_instances == 1:
         instance_startup()
 
     time.sleep(start_delay)
     os.system(f'start /d "{wall_script}" TheWall.ahk')
     time.sleep(macro_delay)
 
-    if start_obs:
+    if start_obs == 1:
         os.system(f'start /d "{obs_exe}" "" obs64.exe')
 
     end()
@@ -86,10 +86,10 @@ def start():
 def end():
     a = input('Press enter to end session')
 
-    if kill_session:
+    if kill_session == 1:
         kill()
 
-    if delete_old_worlds:
+    if delete_old_worlds == 1:
         world_deletion()
 
     exit()
@@ -118,3 +118,5 @@ start()
 # Huge credits to specnr, stole some of his code
 
 # For other issues or questions just dm me, RadioaktiveLanguste#0672
+
+
